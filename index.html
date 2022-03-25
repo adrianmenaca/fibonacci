@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>practica3</title>
+</head>
+<body>
+<script>
+document.write("<hr>")
+document.write("<h3>Serie fibonacci</h3>")
+
+let numero=parseInt(prompt("Ingrese un numero entero positivo "))
+function fibonacci(numero)
+{
+let numeros=[0,1];
+for (let i = 2; i < numero; i++) {
+    numeros[i] = numeros[i - 2] + numeros[i - 1];
+}
+return numeros;
+}
+document.write("el numero Ingresado es "+ numero+"</p>");
+document.write(fibonacci(numero));
+
+
+document.write("<hr>")
+document.write("<h3>Sumatoria de un numero</h3>")
+
+let num=parseInt(prompt("Ingrese un numero para calcular la sumatoria"))
+let n=1
+let suma=0
+while(n<=num){
+	suma=suma+n;
+	n++;
+  }
+  document.write("el numero Ingresado es "+ num +" y la sumatoria es " + suma);
+
+
+ document.write("<hr>")
+document.write("<h3>numeros primos</h3>")
+
+
+
+var rango = parseInt(prompt("Ingrese un numero para calcular los numeros primos en ese rango"));
+var contador = 0;
+const primos = [];
+while(contador<=rango){
+var primo = contador;
+   if (typeof primo== "number"){
+   var ceros = 0;
+for(var i=1; i<=primo; i++){
+    if(primo%i==0){
+        ceros++;
+    }
+}
+if(primo==0 || primo==1){
+    primos[i]=null
+}
+else if(ceros==2){
+    primos[i]=primo;
+}
+}else{
+alert("Numero incorrecto")
+}
+contador++;
+}
+document.write("los numeros primos dentro del rango de  "+ rango + " son:"+ "</p>");
+document.write(primos);
+
+
+
+
+</script>
+
+
+</body>
